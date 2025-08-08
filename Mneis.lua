@@ -7,7 +7,7 @@ task.spawn(function()
     ["PetFarmAutoSwitchFullGrown"] = false,
     ["PetFarmActive"] = false,
     ["LitePetFarmActive"] = true,
-    ["EggFarmActive"] = true,
+    ["EggFarmActive"] = false,
     
     ["HideUselessGui"] = true,
     ["Blur_username"] = true,
