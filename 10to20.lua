@@ -1,5 +1,5 @@
 task.spawn(function()
-    script_key = "CmkiyszPrFKpNoEkNbTAenQauykyEria"
+    script_key = "CADTfQGGpFSPEarbktdgmgHwpBemnebm"
     getgenv().Config = {
     ["PetAMountToBuy"] = "0", -- can be 999
     ["PetRemoteToBuy"] = "aztec_egg_2025_aztec_egg",
