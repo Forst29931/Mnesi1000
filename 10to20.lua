@@ -17,3 +17,19 @@ task.spawn(function()
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/66567bfd337b57eb059b58dbe1badb89.lua"))()
 end)
+
+task.wait(30)
+
+task.spawn(function()
+    while true do
+        local api = game:GetService("ReplicatedStorage").API:FindFirstChild("HalloweenEventAPI/ClaimTreatBag")
+        if api then
+            pcall(function()
+                api:InvokeServer()
+            end)
+        end
+
+        local delay = math.random() * 20 + 550
+        task.wait(delay)
+    end
+end)
