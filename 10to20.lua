@@ -1,35 +1,31 @@
 task.spawn(function()
-    script_key = "CADTfQGGpFSPEarbktdgmgHwpBemnebm"
+    script_key="ooVNbfcdHaVoNAkFFoQmqzRlJdutqxKl";
     getgenv().Config = {
-    ["PetAMountToBuy"] = "0", -- can be 999
-    ["PetRemoteToBuy"] = "aztec_egg_2025_aztec_egg",
+        ["PetAMountToBuy"] = "99", -- can be 999
+        ["WhatCategory"] = "pets", -- gifts if WhatCategory = "" then = pets
+        ["PetRemoteToBuy"] = "retired_egg", -- exemple for gifts halloween_2025_spider_box
 
-    ["PetFarmAutoSwitchFullGrown"] = false,
-    ["PetFarmActive"] = false,
-    ["LitePetFarmActive"] = true,
-    ["EggFarmActive"] = false,
-    
-    ["HideUselessGui"] = true,
-    ["Blur_username"] = true,
-    ["Blazing_Lion_Log"] = false,
-    ["DiscordId"] = "123456",
-    ["Webhook"] = "",
-}
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/66567bfd337b57eb059b58dbe1badb89.lua"))()
-end)
+        ["PetFarmAutoSwitchFullGrown"] = false,
+        ["PetFarmActive"] = true, -- farm potion
+        ["EggFarmActive"] = false, -- farm egg, if no more eggs will farm potion
 
-task.wait(30)
+        ["NeonMegaFarm"] = false,
+        ["BuyEgg"] = "retired_egg", -- only work with NeonMegaFarm, will loop buy this egg when enough bucks
+        
+        ["AutoReleasePet"] = false,
+        ["RecycleWebhook"] = "",
+        ["common"] = false,
+        ["uncommon"] = false,
+        ["rare"] = false,
+        ["ultra_rare"] = false,
 
-task.spawn(function()
-    while true do
-        local api = game:GetService("ReplicatedStorage").API:FindFirstChild("HalloweenEventAPI/ClaimTreatBag")
-        if api then
-            pcall(function()
-                api:InvokeServer()
-            end)
-        end
-
-        local delay = math.random() * 20 + 550
-        task.wait(delay)
-    end
+        ["HideUselessGui"] = true,
+        ["Blur_username"] = true,
+        ["Blazing_Lion_Log"] = false,
+        ["DiscordId"] = "123456",
+        ["Webhook"] = "",
+        ["LegendaryWebhook"] = "",
+        ["NeonMegaWebhook"] = "",
+    }
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/66567bfd337b57eb059b58dbe1badb89.lua"))()
 end)
